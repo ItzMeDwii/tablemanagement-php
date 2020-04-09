@@ -1,0 +1,23 @@
+main {
+  background-color: #212121;
+}
+
+.card-body {
+  background-color: #2E2E2E;
+}
+
+.jumbotron {
+  background-color: #2E2E2E;
+}
+
+.pagination .page-item .page-link {
+  color: #ffffff;
+}
+
+hr {
+  background-color: #2E2E2E;
+}
+
+.map12 {
+  color: #000000;
+}
