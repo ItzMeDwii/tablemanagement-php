@@ -5,7 +5,7 @@ $config = new Config();
 
 <html>
 <head>
-   <meta http-equiv="refresh" content="2; url=<?php echo $config->index; ?>">
+   <meta http-equiv="refresh" content="1; url=<?php echo $config->index; ?>">
 </head>
 <?php
 
@@ -18,7 +18,7 @@ if ($mysqli->connect_errno) {
 
 $kode = $_GET['id'];
 
-if (!kode){
+if (!$kode){
 	echo "INVALID CODE!";
 }
 if ($kode) {
