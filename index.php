@@ -20,15 +20,6 @@ $config = new Config();
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
 <link href="https://assets.azalelnation.com/bootstrap-material-design/css/addons/datatables.min.css" rel="stylesheet">
 <link rel="stylesheet" href="inc/css/index.css"/>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<script type="text/javascript" src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
-<script type="text/javascript" src="https://assets.azalelnation.com/font-awesome/js/all.min.js"></script>
-<script src="https://assets.azalelnation.com/bootstrap-material-design/js/addons/datatables.min.js"></script>
-<script src="inc/js/index.js"></script>
 	
   </head>
 
@@ -36,7 +27,6 @@ $config = new Config();
       
       <div id="loader-wrapper">
 			<div id="loader"></div>
-
 			<div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
 
@@ -178,15 +168,15 @@ $config = new Config();
           </div>
           <div class="modal-body white-text">
             <img
-              src="https://dwii.me/css/DwiiUnknown.webp"
+              src="https://avatars1.githubusercontent.com/u/32206405"
               width="128px"
               alt=""
               class="rounded mx-auto d-block"
             />
             <br />
 <p class="text-center">
-Aplikasi ini dibuat oleh Satya Bagus Dwiatmaja.
-<br>Website ini menggunakan <a href="https://www.php.net/" target="_blank">PHP 7.4</a> + <a target="_blank" href="https://www.mysql.com/">MySQL 5.7</a> dan juga <a href="https://mdbootstrap.com/" target="_blank">MDBootstrap 4.14.0 (Based on Bootstrap 4.4.1)</a>.
+Aplikasi ini dibuat oleh Satya Bagus Dwiatmaja (DwiiUnknown#3704).
+<br>Website ini menggunakan <a href="https://www.php.net/" target="_blank">PHP 7.4</a> + <a target="_blank" href="https://www.mysql.com/">MySQL 5.7</a> dan juga <a href="https://mdbootstrap.com/" target="_blank">MDBootstrap 4.18.0 (Based on Bootstrap 4.4.1)</a>.
 <br>Text editor yang dipakai: <a href="https://www.jetbrains.com/phpstorm/" target="_blank">PhpStorm</a>
 <br>
 <br><a href="https://n12.dwii.me/" target="_blank">© 2020 DwiiUnknown</a>
@@ -199,7 +189,7 @@ Aplikasi ini dibuat oleh Satya Bagus Dwiatmaja.
             <a href="https://github.com/ItzMeDwii"
               ><i class="fab fa-github fa-lg white-text mr-3"></i
             ></a>
-            <a href="https://n12.dwii.me/"
+            <a href="https://dwii.me/"
               ><i class="fas fa-external-link-alt fa-lg white-text mr-3"></i
             ></a>
           </div>
@@ -209,8 +199,8 @@ Aplikasi ini dibuat oleh Satya Bagus Dwiatmaja.
       
 <main>
 <nav class="navbar navbar-expand-lg navbar-dark black fixed-top scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/"><strong><?php echo $config->name; ?></strong></a>
+  <div class="container animated slideInDown">
+    <a class="navbar-brand" href="<?php echo $config->index; ?>"><strong><?php echo $config->name; ?></strong></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -227,6 +217,9 @@ Aplikasi ini dibuat oleh Satya Bagus Dwiatmaja.
     
     <ul class="navbar-nav my-2 my-lg-0 ml-auto">
       <li class="nav-item">
+        <a class="nav-link" href="https://github.com/ItzMeDwii/tablemanagement-php"><i class="fas fa-code-branch"></i> Fork me on GitHub</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#about"><i class="fas fa-info-circle"></i> About</a>
       </li>
     </ul>
@@ -234,9 +227,8 @@ Aplikasi ini dibuat oleh Satya Bagus Dwiatmaja.
   </div>
 </nav>
 <br><br>
-<div class="mask flex-center container text-white" id="con">
-
-<div class="card">
+<div class="container text-white">
+<div class="card mt-5" id="con">
   <h3 class="card-header text-center font-weight-bold">
     Item List
   </h3>
@@ -278,6 +270,23 @@ $mysqli->close();
 </table>
   </div>
 </div>
+</div>
+<br>
+</main>
+<footer class="page-footer font-small black">
+     <div class="footer-copyright text-center py-3">
+       © 2020 <a href="https://github.com/ItzMeDwii/" target="_blank"> DwiiUnknown </a>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://assets.azalelnation.com/font-awesome/js/all.min.js"></script>
+<script src="https://assets.azalelnation.com/bootstrap-material-design/js/addons/datatables.min.js"></script>
+<script src="inc/js/index.js"></script>
 <script>
 $(document).ready(function () {
   $('#list').DataTable({
@@ -305,13 +314,5 @@ $mysqli->close();
 <script>
 autocomplete(document.getElementById("kode"), ids);
 </script>
-</div>
-<br>
-</main>
-<footer class="page-footer font-small black">
-     <div class="footer-copyright text-center py-3">
-       © 2020 <a href="https://github.com/ItzMeDwii/" target="_blank"> DwiiUnknown </a>
-    </div>
-</footer>  
   </body>
 </html>
