@@ -5,7 +5,7 @@ $config = new Config();
 
 <html>
 <head>
-   <meta http-equiv="refresh" content="2; url=<?php echo $config->index; ?>">
+   <meta http-equiv="refresh" content="1; url=<?php echo $config->index; ?>">
 </head>
 <?php
 
@@ -21,6 +21,9 @@ $nama = $_POST['namabarang'];
 $harga = $_POST['harga'];
 $jumlah = $_POST['jumlah'];
 
+if (!$kode || $kode <= 0) {
+   echo '<p class="text-center">Error!</p>'; 
+} else {
 $addprocess = $mysqli->query("UPDATE storeman_items SET name='". $nama ."', price='". $harga ."', stock='". $jumlah ."' WHERE code='". $kode ."';");
 
 if (!$addprocess) {
@@ -28,6 +31,7 @@ if (!$addprocess) {
 }
 if ($addprocess) {
 	echo '<p class="text-center">Done!</p>';
+}
 }
 
 $mysqli->close();
