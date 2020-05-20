@@ -10,7 +10,7 @@ final class Config {
     $this->index = "https://dwii.me/project3/index.php";
     
     // Database Info
-    $this->db_driver = "mysqli";
+    $this->db_driver = "mysqli"; //only support mysqli for now.
     $this->db_host = "localhost";
     $this->db_port = "3306";
     $this->db_username = "";
