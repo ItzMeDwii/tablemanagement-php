@@ -1,14 +1,11 @@
+<html>
+<head>
+   <meta http-equiv="refresh" content="1; url=https://dwii.me/project3/">
+</head>
 <?php
 require_once './config.php';
 $config = new Config();
-?>
 
-<html>
-<head>
-   <meta http-equiv="refresh" content="2; url=<?php echo $config->index; ?>">
-</head>
-
-<?php
 $mysqli = new mysqli($config->db_host, $config->db_username, $config->db_password, $config->db_name);
 
 if ($mysqli->connect_errno) {
@@ -21,6 +18,9 @@ $nama = $_POST['namabarang'];
 $harga = $_POST['harga'];
 $jumlah = $_POST['jumlah'];
 
+if (!$kode || $kode <= 0) {
+   echo '<p class="text-center">Error!</p>'; 
+} else {
 $addprocess = $mysqli->query("INSERT INTO storeman_items (code,name,price,stock) VALUES ('$kode', '$nama', '$harga', '$jumlah')");
 
 if (!$addprocess) {
@@ -29,7 +29,7 @@ if (!$addprocess) {
 if ($addprocess) {
 	echo '<p class="text-center">Done!</p>';
 }
-
+}
 $mysqli->close();
 ?>
 
